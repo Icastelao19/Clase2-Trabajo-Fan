@@ -1,0 +1,118 @@
+:root{
+  --bg:#0b0d10;
+  --panel:#151a21;
+  --text:#e8eef2;
+  --muted:#a7b0b7;
+  --primary:#ff2d55;
+  --border:#242a33;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial;
+  color:var(--text);
+  background:radial-gradient(1200px 600px at 20% -10%, #1b2030 0%, var(--bg) 60%);
+}
+img{max-width:100%;display:block;border-radius:var(--radius)}
+.container{width:min(1100px,92vw);margin:0 auto;padding:0 .5rem}
+.section{padding:3rem 0}
+.section.alt{background:linear-gradient(180deg,rgba(255,255,255,.03),transparent)}
+
+.site-header{position:sticky; top:0; z-index:10; background:rgba(11,13,16,.7); backdrop-filter:blur(8px); border-bottom:1px solid var(--border)}
+.header-inner{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.75rem 0}
+.brand{display:flex; align-items:center; gap:.6rem; font-weight:700}
+.logo{display:grid; place-items:center; width:2.1rem; height:2.1rem; border-radius:10px; background:var(--primary); color:white; box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+.nav ul{list-style:none; margin:0; padding:0; display:flex; gap:.75rem; flex-wrap:wrap}
+.nav a{display:inline-block; text-decoration:none; color:var(--text); padding:.5rem .75rem; border:1px solid transparent; border-radius:10px; transition:all .2s ease}
+.nav a:hover,.nav a:focus{border-color:var(--border); background:rgba(255,255,255,.06)}
+.nav a.active{background:var(--primary); border-color:var(--primary); color:white}
+
+.hero{display:flex; flex-wrap:wrap; gap:1.25rem; align-items:center}
+.hero .copy{flex:1 1 340px}
+.hero .card{flex:1 1 260px; position:relative}
+.badge{position:absolute; right:10px; top:10px; background:rgba(0,0,0,.6); padding:.3rem .6rem; border-radius:999px; font-size:.85rem}
+
+.card{background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:1rem; box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.meta{color:var(--muted); font-size:.95rem}
+.grid{display:flex; flex-wrap:wrap; gap:1.25rem}
+.grid > *{flex:1 1 280px; min-width:0}
+
+.btn{display:inline-block; padding:.6rem .9rem; border-radius:12px; border:1px solid var(--border); color:var(--text); text-decoration:none; font-weight:600; transition:transform .15s ease, background .2s ease}
+.btn.primary{background:var(--primary); border-color:var(--primary); color:white}
+.btn:hover{transform:translateY(-1px)}
+
+.video{position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border:1px solid var(--border); border-radius:var(--radius); box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:var(--radius)}
+
+.figure{display:flex; flex-direction:column; gap:.6rem}
+.figure figcaption{color:var(--muted)}
+
+.site-footer{border-top:1px solid var(--border); padding:1.4rem 0 2.5rem; text-align:center; color:var(--muted)}
+.top-btn{position:fixed; right:1rem; bottom:1rem; z-index:20; width:42px; height:42px; border-radius:999px; display:grid; place-items:center; background:var(--primary); color:white; text-decoration:none; box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.figure .frame{
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+.figure .frame img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.nav a{
+  transition: color .2s ease, background .2s ease, transform .15s ease;
+}
+.nav a:hover,
+.nav a:focus-visible{
+  background: rgba(255,255,255,.06);
+  text-decoration: underline;    
+  transform: translateY(-1px);
+  outline: none;
+}
+
+
+.btn.secondary{
+  background: transparent;
+  border-color: var(--border);
+}
+.btn.secondary:hover,
+.btn.secondary:focus-visible{
+  background: rgba(255,255,255,.06);
+}
+
+
+.card{ position: relative; }
+.tag{
+  position: absolute;     /* <- absolute */
+  top: .75rem;
+  left: .75rem;
+  background: var(--primary);
+  color: #fff;
+  padding: .25rem .5rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+}
+
+
+.grid{ align-items: flex-start; }
+.card h2{ margin-top: .75rem; }
+
+
+.figure img{
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+.figure figcaption{
+  margin-top: .3rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
